@@ -30,6 +30,9 @@ To achieve these objectives, we will leverage multiple open-source datasets and 
 
 ## Project #1: Crop Type-Based
 
+### Description
+Calculate ag plastic use in California based on the spatial distribution of crop types in 2019. 
+
 ### Dependencies
 
 * pandas
@@ -45,11 +48,11 @@ To achieve these objectives, we will leverage multiple open-source datasets and 
 
 ### Input
 * Download spatial dataset [i15_Crop_Mapping_2019](https://gis.data.ca.gov/datasets/363c00277ad74c4ba4f64238edc5430c_0/about).
-* Extract crop of interest shp files into a new folder called "i15_Crop_Mapping_2019_extracted".
+* Extract crop of interest shp files into a new folder called "i15_Crop_Mapping_2019_extracted". E.g., to extract Strawberries, use this filter: 'MAIN_CROP' = 'T20' (crop type code reference: https://gis.water.ca.gov/arcgis/rest/services/Planning/i15_Crop_Mapping_2019/MapServer/0?f=pjson)
 * Prepare "input_from_ERG.csv" to adopt calculation method from the ERG project.
   
 ### Executing Program
-* Run code: "plastic_mapping_code.ipynb"
+* Run code: [plastic_mapping_code.ipynb](https://github.com/Yuanyuan-T/TNC-Ag-Plastic/blob/main/plastic_mapping_code.ipynb)
 
 ### Output
 * "map": jpg file of maps;
@@ -61,6 +64,62 @@ Other files:
 - "output/Agricultural Plastic Mapping in California.pdf": pdf file for general public 
 
 
+## Project #2: RS + ML
+
+### Description
+Use remote sensing and machine learning to build a model for ag plastic assessment in Oxnard, CA in 2019. 
+
+### Input
+(1) Create labeling dataset: visual interpretation (GEE, Earth Engine, GoogleMaps POI and historical street view). Use GEE to draw multipolygons such as
+
+<img width="300" alt="image" src="https://github.com/Yuanyuan-T/TNC-Ag-Plastic/assets/43053656/a9527320-dc8f-4997-931e-b913da8e9d7d">
+
+then assign the class, e.g. 
+```
+// Make a FeatureCollection from the hand-made geometries.
+var polygons = ee.FeatureCollection([
+  ee.Feature(hoop_1, {'class': 0}),
+  ee.Feature(hoop_2, {'class': 0}),
+  ee.Feature(hoop_3, {'class': 0}),
+  ee.Feature(mulch_1, {'class': 1}),
+  ee.Feature(mulch_2, {'class': 1}),
+  ee.Feature(mulch_3, {'class': 1}),
+```
+then export the feature collection as shp,
+```
+Export.table.toDrive({
+  folder: "GEE data/TNC",
+  collection:polygons,
+  description:'label_mulch_hoop',
+  fileFormat:'SHP',
+  fileNamePrefix:'label_mulch_hoop'
+});
+```
+
+Finally, download the shp from Google Drive, and upload it to GEE asset. See instruction: https://developers.google.com/earth-engine/guides/table_upload
+
+In asset (must-have):
+- label_mulch_hoop, 
+- label_nonplastic,
+
+(2) Prepare AOI
+
+In asset (must-have):
+- Oxnard: boundary of Oxnard city.  
+- TruckCrops: extract from crop dataset. Filter: 'Class2' = 'T'.
+
+(3) Crop type shp as validation
+
+In asset (optional):
+- Strawberries_CA, 
+- Bushberries_T19, 
+- Flowers_T16, 
+- Pepers_T21, 
+- Avocados, 
+
+### Executing Program
+* Run code: [Project2-GEE-code.md](https://github.com/Yuanyuan-T/TNC-Ag-Plastic/blob/main/Project2-GEE-code.md)
+(Please adjust the file dir path and name if needed.)
 
 ## Authors
 
@@ -73,10 +132,13 @@ Contributors names and contact info
 ## Version History
 
 * 0.1
-    * Initial Release (2023/08/14)
+    * Initial share (2023/08/14)
 
 ## License
+
+This project is private now.
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
+Special thanks to Oceans Plastic team and Kirk R. Klausmeyer <kklausmeyer@TNC.ORG>.
