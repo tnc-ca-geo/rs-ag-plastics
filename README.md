@@ -125,9 +125,9 @@ In asset (optional):
 
 Contributors names and contact info
   
-[@Yuanyuan Tian](https://www.linkedin.com/in/yuanyuan-tian-geo/)
+[@Yuanyuan Tian](https://www.linkedin.com/in/yuanyuan-tian-geo/): yuanyuantian@asu.edu
 
-[@Darcy Bradley](darcy.bradley@tnc.org)
+[@Darcy Bradley](darcy.bradley@tnc.org): darcy.bradley@tnc.org
 
 ## Version History
 
