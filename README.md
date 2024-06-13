@@ -1,11 +1,13 @@
 # Mapping Agricultural Plastics in California
 
-The Nature Conservancy, CA Oceans
+This work is originally built off of Yuanyuan Tian's Grad Innovation Intern Project in the summer of 2023. TNC's agricultural plastics team has adapted this work to iteratively improve the model and scale it to all of California.
 
-Grad Innovation Intern Project 2023 Summer
+### Updated project description
 
 
-## Description
+## Yuan Yuan's original project description continues below
+
+### Description
 
 Plastic use in agriculture is ubiquitous. Plastics are cheap and versatile, and various plastic products have been developed to effectively increase productivity and efficiency in food systems around the globe. However, plastics are also a major pollutant and degraded or discarded plastic products can pose a serious threat to human and ecosystem health. Carbon emissions from plastics are set to outpace coal by 2030, with agricultural plastic use specifically forecast to increase by 50% over the coming decade. In response, the FAO has declared “an urgent need to better monitor the quantities of plastic products used and that leak into the environment from agriculture” (FAO 2021).
 
