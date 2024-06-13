@@ -5,16 +5,16 @@ This work is originally built off of Yuanyuan Tian's Grad Innovation Intern Proj
 ### Updated project description
 
 
-## Yuan Yuan's original project description continues below
+### Yuan Yuan's original project description continues below
 
-### Description
+#### Description
 
 Plastic use in agriculture is ubiquitous. Plastics are cheap and versatile, and various plastic products have been developed to effectively increase productivity and efficiency in food systems around the globe. However, plastics are also a major pollutant and degraded or discarded plastic products can pose a serious threat to human and ecosystem health. Carbon emissions from plastics are set to outpace coal by 2030, with agricultural plastic use specifically forecast to increase by 50% over the coming decade. In response, the FAO has declared “an urgent need to better monitor the quantities of plastic products used and that leak into the environment from agriculture” (FAO 2021).
 
 California is home to 69,600 farms that support 1.2 million jobs and contribute roughly $50 billion to the state’s economy each year (CDFA 2021). With over 400 agricultural commodities produced in the state, California accounts for 13.7% of all US agricultural production (including 36% of all organic production), creates more than 60% of the national value of fruit and nut crops, and is the fifth largest supplier of food and cotton in the world (CDFA 2021). Yet, plastic use in the state’s agricultural sector is not comprehensively monitored. We do not know the total quantity of plastic used, nor do we know where plastics are applied. The application, degradation, and accumulation of agricultural plastics in soil and groundwater in rural areas across the state poses an environmental threat and raises equity and environmental justice concerns. 
 
 
-### Objectives & Approach
+#### Objectives & Approach
 To address this environmental challenge, we propose creating the first proof of concept map of agricultural plastic use in the state. Pairing satellite imagery with sophisticated image processing algorithms has revolutionized the ability to map and monitor plastic use across vast agricultural areas at relatively low cost. Though applying remote sensing tools and techniques to quantify and map agricultural plastics has been done extensively across Europe and Asia and in select locations in North America, these methods have not been applied to California despite its outsized contribution to global agricultural production. 
 
 We have four objectives: 
@@ -30,12 +30,12 @@ To achieve these objectives, we will leverage multiple open-source datasets and 
 - Statewide/ hyper-local / detailed use map: use SENTINEL-1 & 2 synthetic aperture radar (SAR) and multispectral sensor imagery via Google Earth Engine and imaging processing algorithms to create a detailed map of plastic-covered greenhouse farming areas and plastic-mulched farmlands.
 
 
-## Project #1: Crop Type-Based
+### Project #1: Crop Type-Based
 
-### Description
+#### Description
 Calculate ag plastic use in California based on the spatial distribution of crop types in 2019. 
 
-### Dependencies
+#### Dependencies
 
 * pandas
 * geopandas
@@ -43,20 +43,20 @@ Calculate ag plastic use in California based on the spatial distribution of crop
 * glob
 * os
 
-### Installing
+#### Installing
 
 * Recommend to configure the environment using [Anaconda](https://www.anaconda.com/).
 
 
-### Input
+#### Input
 * Download spatial dataset [i15_Crop_Mapping_2019](https://gis.data.ca.gov/datasets/363c00277ad74c4ba4f64238edc5430c_0/about).
 * Extract crop of interest shp files into a new folder called "i15_Crop_Mapping_2019_extracted". E.g., to extract Strawberries, use this filter: 'MAIN_CROP' = 'T20' (crop type code reference: https://gis.water.ca.gov/arcgis/rest/services/Planning/i15_Crop_Mapping_2019/MapServer/0?f=pjson)
 * Prepare "input_from_ERG.csv" to adopt calculation method from the ERG project.
   
-### Executing Program
+#### Executing Program
 * Run code: [plastic_mapping_code.ipynb](https://github.com/Yuanyuan-T/TNC-Ag-Plastic/blob/main/plastic_mapping_code.ipynb)
 
-### Output
+#### Output
 * "map": jpg file of maps;
 * "shp": spatial data to visualize each map
 
@@ -66,12 +66,12 @@ Other files:
 - "output/Agricultural Plastic Mapping in California.pdf": pdf file for general public 
 
 
-## Project #2: RS + ML
+### Project #2: RS + ML
 
-### Description
+#### Description
 Use remote sensing and machine learning to build a model for ag plastic assessment in Oxnard, CA in 2019. 
 
-### Input
+#### Input
 (1) Create labeling dataset: visual interpretation (GEE, Earth Engine, GoogleMaps POI and historical street view). Use GEE to draw multipolygons such as
 
 <img width="300" alt="image" src="https://github.com/Yuanyuan-T/TNC-Ag-Plastic/assets/43053656/a9527320-dc8f-4997-931e-b913da8e9d7d">
@@ -119,11 +119,11 @@ In asset (optional):
 - Pepers_T21, 
 - Avocados, 
 
-### Executing Program
+#### Executing Program
 * Run code: [Project2-GEE-code.md](https://github.com/Yuanyuan-T/TNC-Ag-Plastic/blob/main/Project2-GEE-code.md)
 (Please adjust the file dir path and name if needed.)
 
-## Authors
+### Authors
 
 Contributors names and contact info
   
@@ -131,16 +131,16 @@ Contributors names and contact info
 
 [@Darcy Bradley](darcy.bradley@tnc.org): darcy.bradley@tnc.org
 
-## Version History
+### Version History
 
 * 0.1
     * Initial share (2023/08/14)
 
-## License
+### License
 
 This project is private now.
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
+### Acknowledgments
 Special thanks to Oceans Plastic team and Kirk R. Klausmeyer <kklausmeyer@TNC.ORG>.
