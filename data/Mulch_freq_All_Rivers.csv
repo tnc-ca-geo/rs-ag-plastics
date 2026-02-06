@@ -1,8 +1,8 @@
-﻿ID,County,Name,count_0,count_1,count_2,count_3,count_4,count_5,count_6
-1,Santa Cruz,Pajaro River,471080,21348,14598,19491,24013,26003,17468
-2,Santa Cruz,San Lorenzo River,708942,37,104,0,0,40,0
-3,Santa Barbara,San Antonio Creek,922645,27957,15913,10312,2685,1604,1190
-4,Santa Barbara,Santa Maria/Sisquoc River,2153083,24385,20972,18678,15931,8814,10062
-5,Santa Barbara,Santa Ynez River,1357288,22851,11187,9904,9711,507,3133
-6,Ventura,Calleguas Creek,1160616,16783,11075,2176,4005,1739,627
-7,Ventura,Santa Clara River,1124714,12089,9423,14704,12628,16919,16642
+﻿ID,County,Name,count_0,count_1,count_2,count_3,count_4,count_5,count_6,count_noncrops,count_crops
+1,Santa Cruz,Pajaro River,471080,21348,14598,19491,24013,26003,17468,444563,149438
+2,Santa Cruz,San Lorenzo River,708942,37,104,0,0,40,0,707751,1372
+3,Santa Barbara,San Antonio Creek,922645,27957,15913,10312,2685,1604,1190,718310,263996
+4,Santa Barbara,Santa Maria/Sisquoc River,2153083,24385,20972,18678,15931,8814,10062,1950190,301735
+5,Santa Barbara,Santa Ynez River,1357288,22851,11187,9904,9711,507,3133,1026146,388435
+6,Ventura,Calleguas Creek,1160616,16783,11075,2176,4005,1739,627,911366,285655
+7,Ventura,Santa Clara River,1124714,12089,9423,14704,12628,16919,16642,827150,379969
