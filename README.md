@@ -49,7 +49,7 @@ All authors are listed in the associated publication.
 * Version 1.0 released February 2026.
 
 ### License
-This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode) - re-distribution and re-use of this licensed work is permitted on the condition that the creator is appropriately credited.
+This project is licensed under the MIT License. Re-distribution and re-use of this licensed work is permitted on the condition that the creator is appropriately credited.
 
 ### Acknowledgments
 The authors would like to thank the members of the Ocean Plastics Strategy team at the Nature Conservancy California, including Patrick Jurney, Amy Zimmer-Faust, and Alexis Jackson. We are very grateful for the help of Brandee Wagner in annotating training data and advising on that process. Finally, we would like to thank April Chang, Amelia Li, Rebecca Qiu, Peter Wu, and Evan Arnold for their interest and engagement with an early phase of this work through their Harvard John A. Paulson School of Engineering and Applied Sciences Capstone project. 
