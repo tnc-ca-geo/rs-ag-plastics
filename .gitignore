@@ -1,5 +1,6 @@
 # Ignore all csvs in data folder except a few
 data/*.csv
+data/*.xlsx
 data/Validated_Training_Data
 # Exceptions
 !data/AllTraining_080425prj_SJfiltered.csv
