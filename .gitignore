@@ -2,6 +2,7 @@
 data/*.csv
 data/*.xlsx
 data/Validated_Training_Data
+
 # Exceptions
 !data/AllTraining_080425prj_SJfiltered.csv
 !data/Crop_and_Mulch_counts_All_Rivers.csv
@@ -13,8 +14,14 @@ output/*.png
 output/*.svg
 output/*.xlsx
 output/*.csv
+
 # Exceptions
 !output/validation_data*.csv
 
 # Notebooks
 .ipynb_checkpoints/
+
+# tifs
+*.tif*
+*.tiff
+*.tfw
