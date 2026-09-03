@@ -25,3 +25,6 @@ output/*.csv
 *.tif*
 *.tiff
 *.tfw
+
+.env
+*.env
