@@ -28,3 +28,6 @@ output/*.csv
 
 .env
 *.env
+
+# macOS
+.DS_Store
