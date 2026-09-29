@@ -1,9 +1,12 @@
 earthengine-api
 geemap
+ipyleaflet<0.19  # pin below anywidget-based rendering, which can fail to display in VS Code
+ipywidgets
 pandas
 numpy
 matplotlib
 ipython
+ipykernel
 scikit-learn
 geopandas
 altair
